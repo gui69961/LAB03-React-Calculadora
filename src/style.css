@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   CALCULADORA
+========================= */
+
+.calc {
+  width: 340px;
+  padding: 20px;
+
+  background-color: #000000;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   VISOR
+========================= */
+
+.display {
+  width: 100%;
+  height: 75px;
+
+  margin-bottom: 15px;
+  padding: 10px 15px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  background-color: #ffffff;
+  color: #000000;
+
+  border-radius: 10px;
+
+  font-size: 32px;
+  font-weight: bold;
+
+  overflow: hidden;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+}
+
+button {
+  height: 60px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: #ffffff;
+  color: #000000;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.15s;
+}
+
+button:hover {
+  background-color: #d6d6d6;
+}
+
+button:active {
+  transform: scale(0.92);
+}
+
+/* =========================
+   OPERAÇÕES
+========================= */
+
+.op {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.op:hover {
+  background-color: #555555;
+}
+
+/* =========================
+   LIMPAR
+========================= */
+
+.clear {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* =========================
+   IGUAL
+========================= */
+
+.igual {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 400px) {
+  .calc {
+    width: 90%;
+  }
+
+  button {
+    height: 55px;
+  }
+
+  .display {
+    height: 70px;
+    font-size: 28px;
+  }
+}
